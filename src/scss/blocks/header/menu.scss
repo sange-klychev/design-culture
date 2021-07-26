@@ -1,0 +1,33 @@
+// Menu
+
+.menu{
+  &__list{
+    display: grid;
+    grid-template-columns: repeat(4, min-content);
+    column-gap: 30px;
+  }
+  &__link{
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      bottom: -20%;
+      right: 0;
+      height: 2px;
+      width: 0;
+      background-color: $basic-black;
+      transition: width .5s;
+      transform-origin: left;
+    }
+    &.active::before{
+      width: 100%;
+    }
+    &:hover::before{
+      width: 100%;
+      right: auto;
+      left: 0;
+    }
+  }
+}

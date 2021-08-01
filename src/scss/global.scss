@@ -2,6 +2,8 @@
 *::before,
 *::after{
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 .body{
   background-color: $basic-white;
@@ -10,8 +12,6 @@
   font-family: 'Montserrat', sans-serif;
 }
 ul, ol, li{
-  padding: 0;
-  margin: 0;
   list-style: none;
 }
 a{
@@ -23,6 +23,9 @@ button, input, textarea, select{
   border: none;
   background: none;
   font-family: inherit;
+}
+button, select{
+  cursor: pointer;
 }
 img{
   display: block;

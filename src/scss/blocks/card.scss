@@ -1,0 +1,56 @@
+// Card
+
+.card{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: 0px 0px 15px $gray;
+  padding-bottom: 20px;
+  &__img{
+    height: 300px;
+    object-fit: cover;
+    grid-column: span 3;
+  }
+  &__title{
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    grid-column: span 3;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 90%;
+      height: 1px;
+      background-color: $basic-black;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
+  &__descr{
+    padding: 0 10px;
+    margin-bottom: 20px;
+    grid-column: span 3;
+  }
+  &__price{
+    font-size: 24px;
+    justify-self: center;
+    align-self: center;
+    &.span{
+      grid-column: span 2;
+    }
+    &.sale{
+      font-size: 14px;
+      color: $gray;
+      text-decoration: line-through;
+    }
+    &.new{
+      justify-self: start;
+    }
+  }
+  &__add{
+    justify-self: center;
+    align-self: center;
+  }
+}

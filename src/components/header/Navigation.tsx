@@ -1,26 +1,26 @@
 import React from 'react';
-
-const storage = window.sessionStorage;
+import { useSelector, useDispatch } from 'react-redux';
+import type { AppState } from '../../redux/reducers';
+import { setMenu } from '../../redux/actions/navigation';
 
 function Navigation() {
-  const activeLinkStorage: string | null = storage.getItem('activeLink');
+  const dispatch = useDispatch();
 
-  const [activeLink, setActiveLink] = React.useState(activeLinkStorage || 'Каталог');
+  const data = useSelector(({ navigation }: AppState) => ({
+    activeMenu: navigation.menu,
+  }));
 
   type MenuItemsType = {
     title: string,
   }
+
   const MENU_ITEMS: MenuItemsType[] = [
     { title: 'Каталог' },
     { title: 'Доставка' },
     { title: 'Блог' },
     { title: 'Магазины' },
   ];
-  const handleClick: Function = (e: React.MouseEvent<HTMLLinkElement>) => {
-    const target = e.target as HTMLElement;
-    setActiveLink(target.innerText);
-    storage.setItem('activeLink', target.innerText);
-  };
+
   return (
     <nav className="menu">
       <ul className="menu__list">
@@ -30,9 +30,9 @@ function Navigation() {
             key={title}
           >
             <a
-              className={title === activeLink ? 'menu__link active' : 'menu__link'}
+              className={title === data.activeMenu ? 'menu__link active' : 'menu__link'}
               href="#catalog"
-              onClick={(e) => handleClick(e)}
+              onClick={() => dispatch(setMenu(title))}
             >
               {title}
             </a>

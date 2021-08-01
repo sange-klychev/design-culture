@@ -1,7 +1,12 @@
 // Header
 
 .header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 30px 0;
+  box-shadow: 0px -20px 40px $basic-black;
+  margin-bottom: 20px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

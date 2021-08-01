@@ -1,7 +1,7 @@
 import React from 'react';
 import sprite from '../assets/icons/sprite.svg';
 
-type Props = {
+type PropsType = {
   name: string,
   color: string,
   width: string,
@@ -10,7 +10,7 @@ type Props = {
 
 function Icon({
   name, color, width, height,
-}: Props) {
+}: PropsType) {
   return (
     <svg fill={color} stroke={color} width={width} height={height}>
       <use xlinkHref={`${sprite}#icon-${name}`} />

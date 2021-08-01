@@ -3,13 +3,15 @@ import { Logo, Navigation, Cart } from './index';
 
 function Header() {
   return (
-    <div className="container">
-      <div className="header">
-        <Logo />
-        <Navigation />
-        <Cart />
+    <header className="header">
+      <div className="container">
+        <div className="header__inner">
+          <Logo />
+          <Navigation />
+          <Cart />
+        </div>
       </div>
-    </div>
+    </header>
   );
 }
 

@@ -15,13 +15,11 @@ function Aside() {
   }
 
   const CATEGORY_ITEMS: CategoryType[] = [
-    { title: 'Все' },
-    { title: 'Футболки' },
-    { title: 'Худи, джемпера' },
-    { title: 'Брюки' },
-    { title: 'Аксессуары' },
-    { title: 'Шорты' },
-    { title: 'Верхняя одежда' },
+    { title: 'Главная' },
+    { title: 'О нас' },
+    { title: 'Проекты' },
+    { title: 'Шаги создания проекта' },
+    { title: 'Стоимость услуг' },
   ];
 
   return (

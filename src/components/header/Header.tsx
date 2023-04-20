@@ -1,5 +1,5 @@
 import React from 'react';
-import { Logo, Navigation, Cart } from './index';
+import { Logo, Navigation, Social } from './index';
 
 function Header() {
   return (
@@ -7,8 +7,10 @@ function Header() {
       <div className="container">
         <div className="header__inner">
           <Logo />
-          <Navigation />
-          <Cart />
+          <div className="header__contacts">
+            <Navigation />
+            <Social />
+          </div>
         </div>
       </div>
     </header>

@@ -1,12 +1,12 @@
 import React from 'react';
 import Icon from '../Icon';
 
-function Cart() {
+function Social() {
   return (
-    <div className="cart">
+    <div className="social">
       <Icon name="instagram" color="#000000" width="30" height="30" />
     </div>
   );
 }
 
-export default Cart;
+export default Social;

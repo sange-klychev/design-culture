@@ -31,6 +31,7 @@ module.exports = {
       'error',
       'single',
     ],
+    'linebreak-style': ['error', 'windows'],
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Header } from './components/header/index';
 import Aside from './components/Aside';
-import Card from './components/card/Card';
 
 import './scss/index.scss';
 
@@ -12,11 +11,7 @@ function App() {
       <div className="content">
         <Aside />
         <div className="catalog">
-          <Card sale />
-          <Card sale={false} />
-          <Card sale />
-          <Card sale />
-          <Card sale={false} />
+          fotocki
         </div>
       </div>
     </div>
